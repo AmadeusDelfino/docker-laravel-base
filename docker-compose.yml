@@ -18,3 +18,9 @@ services:
       dockerfile: app.docker
     volumes: 
       - ./:/var/www
+  db:
+    build:
+      context: ./
+      dockerfile: db.docker
+    ports:
+      - "33061:3306"
